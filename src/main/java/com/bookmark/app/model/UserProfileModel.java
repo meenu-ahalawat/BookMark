@@ -10,15 +10,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
+import lombok.Builder;
 
 @Entity
 @Table(name = "user_profile")
-//@Getter
-//@Setter
-//@AllArgsConstructor
-//@NoArgsConstructor
-//@Builder
-//@ToString
+@Builder
 public class UserProfileModel implements Serializable{
 
 	private static final long serialVersionUID = -6470090944414208496L;
@@ -34,15 +30,15 @@ public class UserProfileModel implements Serializable{
 	@Column(name = "lastname")
 	private String lastname;
 	
-	@Column(name = "username")
+	@Column(name = "username", nullable = false)
 	private String username;
 	
-	@Column(name = "email")
+	@Column(name = "email", nullable = false)
 	private String email;
 	
 	public UserProfileModel() {}
 	
-	public UserProfileModel(Long id, String firstname, String lastname, String username, String email, String phnno,
+	public UserProfileModel(Long id, String firstname, String lastname, String username, String email, long phnno,
 			String address, Timestamp createTimestamp, Timestamp updateTimestamp) {
 		super();
 		this.id = id;
@@ -103,11 +99,11 @@ public class UserProfileModel implements Serializable{
 		this.email = email;
 	}
 
-	public String getPhnno() {
+	public long getPhnno() {
 		return phnno;
 	}
 
-	public void setPhnno(String phnno) {
+	public void setPhnno(long phnno) {
 		this.phnno = phnno;
 	}
 
@@ -135,8 +131,8 @@ public class UserProfileModel implements Serializable{
 		this.updateTimestamp = updateTimestamp;
 	}
 
-	@Column(name = "mobile")
-	private String phnno;
+	@Column(name = "mobile", nullable = false)
+	private long phnno;
 	
 	@Column(name = "address")
 	private String address;

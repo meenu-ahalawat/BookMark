@@ -30,7 +30,7 @@ public class UserAuthModel implements Serializable{
 
 	public UserAuthModel() {}
 
-	public UserAuthModel(Long userAuthId, String userId, String userPhnno, String userPassword,
+	public UserAuthModel(Long userAuthId, String userId, long userPhnno, String userPassword,
 			Timestamp createTimestamp, Timestamp updateTimestamp) {
 		super();
 		this.userAuthId = userAuthId;
@@ -57,11 +57,11 @@ public class UserAuthModel implements Serializable{
 		this.userId = userId;
 	}
 
-	public String getUserPhnno() {
+	public long getUserPhnno() {
 		return userPhnno;
 	}
 
-	public void setUserPhnno(String userPhnno) {
+	public void setUserPhnno(long userPhnno) {
 		this.userPhnno = userPhnno;
 	}
 
@@ -100,7 +100,7 @@ public class UserAuthModel implements Serializable{
 	private String userId;
 	
 	@Column(name = "user_mobile")
-	private String userPhnno;
+	private long userPhnno;
 	
 	@Column(name = "user_password")
 	private String userPassword;

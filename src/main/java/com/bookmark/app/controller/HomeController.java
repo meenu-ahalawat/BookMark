@@ -12,28 +12,16 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping(ApplicationConstant.API_URL)
 @Slf4j
 public class HomeController {
-	
-	@GetMapping("/home")
-	public String homePage() {
-		log.info("Home Page loading!!");
-		return "home";
-	}
-	
+
 	@GetMapping("/books")
 	public String bookPage() {
 		log.info("book Page loading!!");
 		return "book";
 	}
 	
-	@GetMapping("/about")
-	public String aboutPage() {
-		log.info("about Page loading!!");
-		return "about";
-	}
-	
-	@GetMapping("/mainHome")
+	@GetMapping("/home")
 	public String signPage() {
-		log.info("Main Home Page loading!!");
+		log.info("BookMark home Page loading!!");
 		return "mainHome";
 	}
 	

@@ -8,4 +8,6 @@ import com.bookmark.app.model.UserProfileModel;
 @Repository
 public interface UserProfileRepository extends JpaRepository<UserProfileModel, Long>{
 
+	UserProfileModel findByEmail(String clientEmail);
+
 }

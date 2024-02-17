@@ -16,15 +16,8 @@
     display: none;
 }
 
-.container{
-    max-width: 1200px;
-    width: 90%;
-    margin: auto;
-}
-
 .navbar{
     box-shadow: 0px 5px 10px 0px #aaa;
-    position: fixed;
     width: 100%;
     background: #fff;
     color: #000;
@@ -40,12 +33,14 @@
 }
 
 .menu-items{
-    order: 2;
+    order: 3;
     display: flex;
+    margin-right: 100px;
 }
 .logo{
-    order: 1;
+	order: 1;
     font-size: 2.3rem;
+    margin-left: 150px;
 }
 
 .menu-items li{
@@ -62,7 +57,55 @@
 }
 
 .navbar a:hover{
-    color: #117964;
+    color: #ff7200;
+}
+
+.search{
+	order: 2;
+    width: 330px;
+    float: left;
+    margin-left: 150px;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color: rgb(0, 0, 0);
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
 }
 
 @media (max-width: 768px){
@@ -171,6 +214,10 @@
     .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
         transform: rotate(-45deg);
     }
+    
+    .content-main {
+		z-index: 50;
+	}
 
 }
 
@@ -180,37 +227,43 @@
     }
 }
 
-
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+.signup-container {
+	background: linear-gradient(-45deg, rgb(239, 239, 239), rgb(128, 128, 128), rgb(239, 239, 239), rgb(192, 192, 192), rgb(172, 172, 172), rgb(239, 239, 239), rgb(172, 172, 172), rgb(239, 239, 239));
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100%;
 }
 
-.signup-container {
-  height: 100vh;
+.card-main{
+	height: 100%;
   width: 100%;
   align-items: center;
   display: flex;
   justify-content: center;
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(253, 101, 133, 1) 0%,
-    rgba(255, 211, 165, 1) 90%
-  );
+  padding-bottom: 70px;
 }
 
 .card {
   border-radius: 10px;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-  width: 400px;
-  height: 400px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.7);
+  width: 850px;
+  height: 500px;
+  padding: 20px 25px;
+  margin-top: 80px;
   background-color: #ffffff;
-  padding: 10px 30px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.col {
+  flex: 1;
+  margin-right: 10px;
 }
 
 .card_title {
@@ -224,24 +277,26 @@
 }
 
 .form input {
-  margin: 10px 0;
-  width: 100%;
-  background-color: #e2e2e2;
+  margin: 10px 30px;
+  width: 85%;
+  background-color: #f4f4f4;
   border: none;
   outline: none;
-  padding: 12px 20px;
+  padding: 15px 30px;
   border-radius: 4px;
 }
 
 .form button {
-  background-color: #4796ff;
+  background-color: #ff7200;
   color: #ffffff;
   font-size: 16px;
   outline: none;
   border-radius: 5px;
   border: none;
-  padding: 8px 15px;
-  width: 100%;
+  padding: 10px 15px;
+  width: 50%;
+  margin-left: 200px;
+  cursor: pointer;
 }
 
 .card_terms {
@@ -255,7 +310,7 @@
 }
 
 .card_terms span {
-  margin: 5px;
+  margin: 8px;
   font-size: 13px;
 }
 
@@ -287,4 +342,33 @@
 .example button:active{
   background-color: #81ccee; 
 }
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 

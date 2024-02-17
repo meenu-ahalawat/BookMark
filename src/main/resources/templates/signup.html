@@ -8,9 +8,14 @@
 <link rel="stylesheet" type="text/css" href="/css/signupLogin.css">
 </head>
 <body>
-			
     <nav class="navbar">
+				
         <div class="navbar-container container">
+			<h1 class="logo">BookMARK</h1>
+			<!--<div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>-->
             <input type="checkbox" name="" id="">
             <div class="hamburger-lines">
                 <span class="line line1"></span>
@@ -23,11 +28,11 @@
                 <li><a href="/bookmark/about">ABOUT US</a></li>
                 <li><a href="/bookmark/register">SIGN UP</a></li>
             </ul>
-            <h1 class="logo">BookMARK</h1>
+            
         </div>
     </nav>
-
 <div class="signup-container">
+	<div class = "card-main">
       <div class="card">
         <div class="card_title">
           <h1>Create Account</h1>
@@ -35,17 +40,47 @@
         </div>
         <div class="form">
         <form action="/bookmark/signup" method="POST">
+			<div class="row">
+				<div class="col">
+          <input type="text" name="firstname" placeholder="FirstName" id="firstname" />
+				</div>
+			<div class="col">
+          <input type="text" name="lastname" placeholder="LastName" id="lastname" />
+          </div>
+          </div>
+          <div class="row">
+				<div class="col">
           <input type="text" name="username" id="username" placeholder="UserName" />
+          </div>
+          <div class="col">
+          <input type="number" name="phnno" id="phnno" placeholder="PhoneNumber" />
+          </div>
+          </div>
+          <div class="row">
+				<div class="col">
           <input type="email" name="email" placeholder="Email" id="email" />
+          </div>
+          <div class="col">
+          <input type="address" name="address" placeholder="Address" id="address" />
+          </div>
+          </div>
+          <div class="row">
+				<div class="col">
           <input type="password" name="password" placeholder="Password" id="password" />
-          <button onclick="signupFormSubmit();" id="b3">Sign Up</button>
+          </div>
+          <div class="col">
+		  </div>
+          </div>
+          <a href=""><button onclick="signupFormSubmit();" id="b3">Sign Up</button></a>
           </form>
         </div>
         <div class="card_terms">
             <input type="checkbox" name="" id="terms"> <span>I have read and agree to the <a href="">Terms of Service</a></span>
         </div>
       </div>
+	</div>
     </div>
+   
 </body>
 <script>
 	

@@ -5,10 +5,10 @@
 
 .main{
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0)50%,rgba(0,0,0,0)50%), url(1.jpg);
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    height: 80vh;
 }
 
 .navbar input[type="checkbox"],
@@ -19,8 +19,9 @@
 .navbar{
     box-shadow: 0px 5px 10px 0px #aaa;
     width: 100%;
-    background: rgb(229, 226, 226);
+    background: #fff;
     color: #000;
+    opacity: 0.85;
     z-index: 100;
 }
 
@@ -39,7 +40,7 @@
 .logo{
 	order: 1;
     font-size: 2.3rem;
-    margin-left: 100px;
+    margin-left: 150px;
 }
 
 .menu-items li{
@@ -56,7 +57,7 @@
 }
 
 .navbar a:hover{
-    color: #117964;
+    color: #ff7200;
 }
 
 .search{
@@ -213,6 +214,10 @@
     .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
         transform: rotate(-45deg);
     }
+    
+    .content-main {
+		z-index: 50;
+	}
 
 }
 
@@ -230,18 +235,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 
-
+.content-main{
+	display: flex;
+}
 
 .content{
-    width: 1200px;
+    width: 100%;
     height: auto;
-    margin: auto;
-    color: #fff;
+    margin-left: 120px;
+    color: #000;
     position: relative;
+    margin-top: 100px;
 }
 
 .content .par{
@@ -281,7 +289,7 @@
 }
 
 .cn:hover{
-    background-color: #fff;
+    background-color: rgb(229, 229, 229);
 }
 
 .content span{
@@ -387,9 +395,11 @@
 .icons ion-icon:hover{
     color: #ff7200;
 }*/
-
-.homeimage {
-	width: 100%;
-	height: 30%;
-	display: flex;
+.homeimage{
+	display:flex;
+	height: 700px;
+	width: 700px;
+	overflow: visible;
+	margin-right: 20px;
+	margin-top: -50px;
 }

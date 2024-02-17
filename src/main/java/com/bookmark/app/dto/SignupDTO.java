@@ -14,13 +14,13 @@ public class SignupDTO {
 	private String lastname;
 	private String username;
 	private String email;
-	private String phnno;
+	private long phnno;
 	private String address;
 	@NonNull
 	private String password;
 	
 	
-	public SignupDTO(String firstname, String lastname, String username, String email, String phnno, String address, String password) {
+	public SignupDTO(String firstname, String lastname, String username, String email, long phnno, String address, String password) {
 		super();
 		this.firstname = firstname;
 		this.lastname = lastname;
@@ -60,10 +60,10 @@ public class SignupDTO {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPhnno() {
+	public long getPhnno() {
 		return phnno;
 	}
-	public void setPhnno(String phnno) {
+	public void setPhnno(long phnno) {
 		this.phnno = phnno;
 	}
 	public String getAddress() {
